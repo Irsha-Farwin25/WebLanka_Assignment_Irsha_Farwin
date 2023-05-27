@@ -66,7 +66,7 @@
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">
@@ -78,6 +78,42 @@
                 
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold mb-4">Forms</h5>
+              <div class="card">
+                <div class="card-body">
+                <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Email</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach($data as $data1)
+    <tr>
+      <th scope="row">1</th>
+      <td>{{$data1->name}}</td>
+      <td>{{$data1->address}}</td>
+      <td>{{$data1->email}}</td>
+      <td><a>edit</a></td>
+      <td><a>delete</a></td>
+    </tr>
+   @endforeach    
+  </tbody>
+</table>
                 </div>
               </div>
           
