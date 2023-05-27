@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\MainController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,4 +27,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::post('insert',[MainController::class,'create']);
 });
